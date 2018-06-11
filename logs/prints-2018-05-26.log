@@ -1,0 +1,14 @@
+23:15:05.763 [main] INFO  resources.baseClass - Restricted User
+23:15:07.921 [main] INFO  resources.baseClass - UnRestricted User
+23:17:27.309 [main] INFO  resources.baseClass - Driver is initialized
+23:17:38.591 [main] INFO  resources.baseClass - Navigated to homepage
+23:17:38.674 [main] INFO  resources.baseClass - Validated presence of Navigation Bar
+23:17:38.724 [main] INFO  resources.baseClass - Successfully validated text message
+23:19:32.368 [main] INFO  resources.baseClass - Driver is initialized
+23:19:38.358 [main] INFO  resources.baseClass - Navigated to homepage
+23:19:38.493 [main] INFO  resources.baseClass - Validated presence of Navigation Bar
+23:19:42.840 [main] INFO  resources.baseClass - Driver is initialized
+23:19:58.046 [main] INFO  resources.baseClass - Navigated to homepage
+23:19:58.100 [main] INFO  resources.baseClass - Successfully validated text message
+23:20:02.264 [main] INFO  resources.baseClass - Driver is initialized
+23:20:05.144 [main] INFO  resources.baseClass - Navigated to loginpage

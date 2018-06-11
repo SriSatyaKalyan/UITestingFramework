@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QA Click Academy Suite">
+
+  <listeners>
+  	<listener class-name="Project.listeners"/>
+  	<listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+
+  <test thread-count="5" name="Basic Tests">
+  
+    <classes>
+ 		  <class name="Project.HomePageTest"/>       
+          <class name="Project.LoginPageTest"/>      
+    </classes>
+    
+  </test> <!-- Basic Tests -->
+  
+  <test thread-count="5" name="Practice Tests">
+  
+    <classes>
+         <class name="Project.PracticePageTest1"/>  
+         <class name="Project.PracticePageTest2"/> 
+    </classes>
+    
+  </test> <!-- Practice Tests -->
+  
+  <test thread-count="5" name="SignUp Tests">
+  
+    <classes>
+        <class name="Project.SignUpPageTest"/>  
+    </classes>
+    
+  </test> <!-- Practice Tests -->
+  
+</suite> <!-- QA Click Academy Suite -->

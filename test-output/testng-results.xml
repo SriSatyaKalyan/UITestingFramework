@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="QA Click Academy Suite" duration-ms="27835" started-at="2018-06-09T20:28:35Z" finished-at="2018-06-09T20:29:02Z">
+    <groups>
+    </groups>
+    <test name="Basic Tests" duration-ms="13" started-at="2018-06-09T20:28:35Z" finished-at="2018-06-09T20:28:35Z">
+    </test> <!-- Basic Tests -->
+    <test name="Practice Tests" duration-ms="27740" started-at="2018-06-09T20:28:35Z" finished-at="2018-06-09T20:29:02Z">
+      <class name="Project.PracticePageTest2">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.PracticePageTest2@34e9fd99]" name="openBrowser" is-config="true" duration-ms="11763" started-at="2018-06-09T14:28:35Z" finished-at="2018-06-09T14:28:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="accessAllLinks()[pri:0, instance:Project.PracticePageTest2@34e9fd99]" name="accessAllLinks" duration-ms="15891" started-at="2018-06-09T14:28:46Z" finished-at="2018-06-09T14:29:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accessAllLinks -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.PracticePageTest2@34e9fd99]" name="closeBrowser" is-config="true" duration-ms="62" started-at="2018-06-09T14:29:02Z" finished-at="2018-06-09T14:29:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Project.PracticePageTest2 -->
+    </test> <!-- Practice Tests -->
+    <test name="SignUp Tests" duration-ms="1" started-at="2018-06-09T20:29:02Z" finished-at="2018-06-09T20:29:02Z">
+    </test> <!-- SignUp Tests -->
+  </suite> <!-- QA Click Academy Suite -->
+</testng-results>

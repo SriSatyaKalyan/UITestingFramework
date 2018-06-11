@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [QA Click Academy Suite]">
+  <listeners>
+    <listener class-name="Project.listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test name="Practice Tests(failed)">
+    <classes>
+      <class name="Project.PracticePageTest2">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="iFrameOperation"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Project.PracticePageTest2 -->
+    </classes>
+  </test> <!-- Practice Tests(failed) -->
+</suite> <!-- Failed suite [QA Click Academy Suite] -->
