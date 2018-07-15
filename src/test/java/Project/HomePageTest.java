@@ -21,12 +21,11 @@ import resources.baseClass;
 
 public class HomePageTest extends baseClass{
 	
+	public homepageObjects homepageobjects = new homepageObjects(driver);
+	
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
-	
-	//Declaring an instance of the objects page here
-	//homepageObjects objs = new homepageObjects(driver);
-	
+		
 	@BeforeClass
 	public void openBrowser() throws IOException {
 		driver = initializeDriver();
@@ -38,26 +37,26 @@ public class HomePageTest extends baseClass{
 	@Test
 	public void PopupPresence() {
 		log.info("HomePageTest.PopupPresence");
-		homepageObjects objs = new homepageObjects(driver);
+//		homepageObjects homepageobjects = new homepageObjects(driver);
 		
 		//Code snippet to get the popup out of the page
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(objs.findPopup()));
-		//System.out.println("Popup visible");
-		wait.until(ExpectedConditions.elementToBeClickable(objs.findNoThanks()));
-		objs.getNoThanksbutton().click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(homepageobjects.findPopup()));
+		//log.info("Popup visible");
+		wait.until(ExpectedConditions.elementToBeClickable(homepageobjects.findNoThanks()));
+		homepageobjects.getNoThanksbutton().click();
 		
-		System.out.println(driver.switchTo().alert().getText());
+		log.info(driver.switchTo().alert().getText());
 	}
 	
 	@Test
 	public void TitleTextValidation() {	
 		log.info("HomePageTest.TitleTextValidation");
-		homepageObjects objs = new homepageObjects(driver);
+//		homepageObjects objs = new homepageObjects(driver);
 				
-		String title_text = objs.getTitle().getText();
+		String title_text = homepageobjects.getTitle().getText();
 		String expected = "FEATURED COURSES";
-//		System.out.println(title_text);
+//		log.info(title_text);
 		
 		if(title_text.contains(expected)) {
 			log.info("Successfully validated Text Message on Home Page");
@@ -71,8 +70,8 @@ public class HomePageTest extends baseClass{
 	@Test
 	public void NavigationBarPresence() {
 		log.info("HomePageTest.NavigationBarPresence");
-		homepageObjects objs = new homepageObjects(driver);
-		Assert.assertTrue(objs.getNavigationBar().isDisplayed());
+//		homepageObjects objs = new homepageObjects(driver);
+		Assert.assertTrue(homepageobjects.getNavigationBar().isDisplayed());
 		log.info("Validated presence of Navigation Bar");
 	}
 	

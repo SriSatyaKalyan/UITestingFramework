@@ -14,17 +14,14 @@ public class listeners implements ITestListener{
 
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	public void onStart(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -41,18 +38,13 @@ public class listeners implements ITestListener{
 
 	public void onTestSkipped(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	public void onTestStart(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
 	}
-	
-
 }

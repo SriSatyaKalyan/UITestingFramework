@@ -24,6 +24,9 @@ import resources.baseClass;
 
 public class LoginPageTest extends baseClass {
 	
+	public loginpageObjects loginpageobjects = new loginpageObjects(driver);
+	public homepageObjects homepageobjects = new homepageObjects(driver);
+	
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 	
@@ -38,18 +41,18 @@ public class LoginPageTest extends baseClass {
 	@Test
 	public void LoginButton() {	
 		log.info("LoginPageTest.LoginButton");
-		loginpageObjects objs = new loginpageObjects(driver);
-		homepageObjects objs2 = new homepageObjects(driver);
+//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
+//		homepageObjects homepageobjects = new homepageObjects(driver);
 		
 		//Code snippet to get the popup out of the page
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(objs2.findPopup()));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(homepageobjects.findPopup()));
 		//System.out.println("Popup visible");
-		wait.until(ExpectedConditions.elementToBeClickable(objs2.findNoThanks()));
-		objs2.getNoThanksbutton().click();
+		wait.until(ExpectedConditions.elementToBeClickable(homepageobjects.findNoThanks()));
+		homepageobjects.getNoThanksbutton().click();
 		
-		objs.selectLogin().click();
-		String title_text = objs.getTitleText().getText();
+		loginpageobjects.selectLogin().click();
+		String title_text = loginpageobjects.getTitleText().getText();
 		//System.out.println(title_text);
 		String expected = "Log In to QaClickAcademy";
 		
@@ -63,17 +66,17 @@ public class LoginPageTest extends baseClass {
 	@Test(dataProvider = "LoginDetails")
 	public void LoginDetails(String username, String password, String text) throws IOException {
 		log.info("LoginPageTest.LoginDetails");
-		loginpageObjects objs = new loginpageObjects(driver);
+//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
 		driver.navigate().to(prop.getProperty("loginpage"));
 		
 		log.info("LoginPageTest.LoginDetails");
 		log.info(text);
 		
-		objs.emailId().sendKeys(username);
-		objs.passwordId().sendKeys(password);
-		objs.clickLogin().click();
+		loginpageobjects.emailId().sendKeys(username);
+		loginpageobjects.passwordId().sendKeys(password);
+		loginpageobjects.clickLogin().click();
 		
-		if(objs.getErrorMessage().size() > 0) {
+		if(loginpageobjects.getErrorMessage().size() > 0) {
 			log.info("Expected Error Message - Credentials Invalid");
 			Assert.assertTrue(true);
 		}
@@ -99,12 +102,12 @@ public class LoginPageTest extends baseClass {
 	@Test
 	public void ForgotPassword() {
 		log.info("LoginPageTest.ForgotPassword");
-		loginpageObjects objs = new loginpageObjects(driver);
+//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
 		driver.navigate().to(prop.getProperty("loginpage"));
 		
-		objs.getForgotPassword().click();
+		loginpageobjects.getForgotPassword().click();
 		
-		if(objs.getResetPassword().size() > 0) {
+		if(loginpageobjects.getResetPassword().size() > 0) {
 			log.info("Reset Password button is present");
 			Assert.assertTrue(true);
 		}else {
@@ -116,18 +119,18 @@ public class LoginPageTest extends baseClass {
 	@Test
 	public void SendInstructions() {
 		log.info("LoginPageTest.SendInstructions");
-		loginpageObjects objs = new loginpageObjects(driver);
+//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
 		driver.navigate().to(prop.getProperty("loginpage"));
 		
-		objs.getForgotPassword().click();
+		loginpageobjects.getForgotPassword().click();
 		//System.out.println("Clicked Forgot Password button");
 		
 		Actions action = new Actions(driver);
 		//If there is any error, it would be in prop.getProperty function
-		action.moveToElement(objs.getresetemailId()).sendKeys(prop.getProperty("randomemail")).build().perform();
-		action.moveToElement(objs.sendInstructions()).click().build().perform();
+		action.moveToElement(loginpageobjects.getresetemailId()).sendKeys(prop.getProperty("randomemail")).build().perform();
+		action.moveToElement(loginpageobjects.sendInstructions()).click().build().perform();
 		//I am struggling because I want to hit "Enter" instead of the "Send Instructions" button
-		if (objs.getInvalidEmailError().size() > 0) {
+		if (loginpageobjects.getInvalidEmailError().size() > 0) {
 			log.info("The invalid error message is present");
 			Assert.assertTrue(true);
 		}else {

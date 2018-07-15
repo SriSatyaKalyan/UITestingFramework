@@ -19,6 +19,8 @@ import resources.baseClass;
 
 public class SignUpPageTest extends baseClass{
 	
+	public signuppageObjects signuppageobject = new signuppageObjects(driver);
+	
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 		
@@ -32,10 +34,9 @@ public class SignUpPageTest extends baseClass{
 	
 	@Test
 	public void TitleTextValidation() {
-		signuppageObjects objs = new signuppageObjects(driver);
 		log.info("SignUpPageTest.TitleTextValidation");
 		
-		String title_text = objs.getTitleText().getText();
+		String title_text = signuppageobject.getTitleText().getText();
 		String expected = "Sign Up to QaClickAcademy";
 		System.out.println(title_text);
 		
@@ -48,55 +49,53 @@ public class SignUpPageTest extends baseClass{
 		}
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Test(dataProvider = "SignupDetails")
 	public void SignUpTest(String fullname, String emailaddress, boolean subscriptionCheckbox, String password, String confirmpassword, boolean termsofuseCheckbox, String credentialsinfo) {
 		log.info("SignUpPageTest.SignUpTest");
-		signuppageObjects objs = new signuppageObjects(driver);
 		log.info(credentialsinfo);
-		objs.fullName().sendKeys(fullname);
-		objs.emailAddress().sendKeys(emailaddress);
+		signuppageobject.fullName().sendKeys(fullname);
+		signuppageobject.emailAddress().sendKeys(emailaddress);
 		
 		if (subscriptionCheckbox) {
-			if (!(objs.subscriptionCheckbox().isSelected())) {
-				objs.subscriptionCheckbox().click(); }	
+			if (!(signuppageobject.subscriptionCheckbox().isSelected())) {
+				signuppageobject.subscriptionCheckbox().click(); }	
 		}
 			
-		objs.password().sendKeys(password);
-		objs.confirmPassword().sendKeys(confirmpassword);
+		signuppageobject.password().sendKeys(password);
+		signuppageobject.confirmPassword().sendKeys(confirmpassword);
 		
 		if (termsofuseCheckbox) {
-			if (!(objs.termsofuseCheckbox().isSelected()))
-				objs.termsofuseCheckbox().click();
+			if (!(signuppageobject.termsofuseCheckbox().isSelected()))
+				signuppageobject.termsofuseCheckbox().click();
 		}
 
-		objs.signupButton().click();	
+		signuppageobject.signupButton().click();	
 		
-		System.out.println("ErrorExistence " + objs.ErrorMessage().size());
-		if (((List<WebElement>) objs.ErrorMessage()).size() > 0) {
+		System.out.println("ErrorExistence " + signuppageobject.ErrorMessage().size());
+		if (((List<WebElement>) signuppageobject.ErrorMessage()).size() > 0) {
 			
-			System.out.println("EmailUseError " + objs.emailUseErrorMessage().size());
-			System.out.println("PasswordError " + objs.passwordErrorMessage().size());
-			System.out.println("TermsUsageError " + objs.termsErrorMessage().size());
+			System.out.println("EmailUseError " + signuppageobject.emailUseErrorMessage().size());
+			System.out.println("PasswordError " + signuppageobject.passwordErrorMessage().size());
+			System.out.println("TermsUsageError " + signuppageobject.termsErrorMessage().size());
 			
-			if (((List<WebElement>) objs.emailUseErrorMessage()).size() > 0) {
+			if (((List<WebElement>) signuppageobject.emailUseErrorMessage()).size() > 0) {
 				log.info("Email is already in use");
 				Assert.assertTrue(true);
 			}
 			
-			if (((List<WebElement>) objs.passwordErrorMessage()).size() > 0) {
+			if (((List<WebElement>) signuppageobject.passwordErrorMessage()).size() > 0) {
 				log.info("Password confirmation doesn't match Password");
 				Assert.assertTrue(true);
 			}
 			
-			if (((List<WebElement>) objs.termsErrorMessage()).size() > 0) {
+			if (((List<WebElement>) signuppageobject.termsErrorMessage()).size() > 0) {
 				log.info("You must agree to the Terms of Use and Privacy Policy");
 				Assert.assertTrue(true);
 			}
 			
 		}else {
-			System.out.println(objs.verifyingText().getText());
-			if (objs.verifyingText().getText().contains("Courses")) {
+			System.out.println(signuppageobject.verifyingText().getText());
+			if (signuppageobject.verifyingText().getText().contains("Courses")) {
 				Assert.assertTrue(true);
 			}
 		}
