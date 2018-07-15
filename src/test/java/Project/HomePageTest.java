@@ -1,3 +1,8 @@
+/**
+ * Author: Satya 
+ * Purpose: The purpose of this file is to have tests which run on the home page
+*/
+
 package Project;
 import static org.testng.Assert.assertTrue;
 import java.io.IOException;
