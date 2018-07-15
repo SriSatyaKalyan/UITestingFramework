@@ -1,3 +1,8 @@
+/**
+ * Author: Satya 
+ * Purpose: This file is the POM for signuppage
+*/
+
 package pageObjects;
 
 import java.util.List;

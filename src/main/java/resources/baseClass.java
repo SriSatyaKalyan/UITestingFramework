@@ -1,3 +1,8 @@
+/**
+ * Author: Satya 
+ * Purpose: This file is the baseclass which decides which browser the tests should run on
+*/
+
 package resources;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,10 +31,11 @@ public class baseClass {
 		
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream("C:\\Users\\satya\\Desktop\\Eclipse Workspace\\Framework56\\src\\main\\java\\resources\\data.properties");
-		                                           
 		prop.load(fis);
+		
 		String browserName = prop.getProperty("browser");
 		
+		//Loop for Deciding which browser the driver should operate on
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\satya\\Desktop\\Eclipse Workspace\\Selenium Software\\chromedriver.exe");
 			driver = new ChromeDriver();
@@ -63,7 +69,7 @@ public class baseClass {
 	    return randomStrings;
 	}
 	
-	//Method to get screenshot
+	//Method to get screenshot and provide path as to where the screenshots should be saved
 	public void getScreenshot(String nameoftest) throws IOException {
 		File screenshotfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileHandler.copy(screenshotfile, new File("C:\\Users\\satya\\Desktop\\Eclipse Workspace\\Framework56\\TestFailureScreenshots\\" + nameoftest + ".png"));

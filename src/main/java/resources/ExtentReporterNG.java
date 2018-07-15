@@ -1,3 +1,8 @@
+/**
+ * Author: Satya 
+ * Purpose: This file is for the purpose of having ExtentReporter provide better insight into the test results
+*/
+
 package resources;
 
 import java.io.File;

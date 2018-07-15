@@ -1,3 +1,8 @@
+/**
+ * Author: Satya 
+ * Purpose: This (second)file is the POM for practicepage
+*/
+
 package pageObjects;
 
 import java.util.List;

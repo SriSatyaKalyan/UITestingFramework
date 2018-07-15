@@ -1,3 +1,8 @@
+/**
+ * Author: Satya 
+ * Purpose: This file is the POM for homepage
+*/
+
 package pageObjects;
 
 import org.openqa.selenium.By;
@@ -43,26 +48,4 @@ public class homepageObjects {
 	public WebElement getNoThanksbutton() {
 		return driver.findElement(nothanksbutton);
 	}
-
-	
-	 
-		
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
