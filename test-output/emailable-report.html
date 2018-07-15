@@ -31,20 +31,36 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Basic Tests</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="stripe"><td style="text-align:left;padding-right:2em">Practice Tests</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">27.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr><td style="text-align:left;padding-right:2em">SignUp Tests</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="total"><td>Total</td>
-<td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">27.8 seconds</td><td colspan="2">&nbsp;</td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">108.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Practice Tests &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">Project.PracticePageTest2</td><td><a href="#m1"><b>accessAllLinks</b>  </a></td><td class="numi">1</td><td>1528576126923</td><td class="numi">15891</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="5">Project.LoginPageTest</td><td><a href="#m1"><b>ForgotPassword</b>  </a></td><td class="numi">1</td><td>1531692918214</td><td class="numi">4003</td></tr><tr class="passedodd"><td><a href="#m2"><b>LoginButton</b>  </a></td><td class="numi">1</td><td>1531692935917</td><td class="numi">5558</td></tr><tr class="passedodd"><td><a href="#m3"><b>LoginDetails</b>  </a></td><td class="numi">2</td><td>1531692953610</td><td class="numi">34687</td></tr><tr class="passedodd"><td><a href="#m4"><b>LoginDetails</b>  </a></td><td class="numi">2</td><td>1531692953610</td><td class="numi">34687</td></tr><tr class="passedodd"><td><a href="#m5"><b>SendInstructions</b>  </a></td><td class="numi">1</td><td>1531693002512</td><td class="numi">3240</td></tr>
 </table>
-<h1>Basic Tests</h1>
-<h1>Practice Tests</h1>
-<h2 id="m1">Project.PracticePageTest2:accessAllLinks</h2>
+<h1>Default test</h1>
+<h2 id="m1">Project.LoginPageTest:LoginDetails</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>batman@gotham.com</td>
+<td>123456</td>
+<td>UnRestricted User</td>
+</tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h1>SignUp Tests</h1>
+<h2 id="m2">Project.LoginPageTest:SendInstructions</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">Project.LoginPageTest:LoginButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">Project.LoginPageTest:LoginDetails</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>pratyusha321@gmail.com</td>
+<td>123456</td>
+<td>Restricted User</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">Project.LoginPageTest:ForgotPassword</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

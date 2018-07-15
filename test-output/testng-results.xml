@@ -1,29 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="QA Click Academy Suite" duration-ms="27835" started-at="2018-06-09T20:28:35Z" finished-at="2018-06-09T20:29:02Z">
+  <suite name="Default suite" duration-ms="108355" started-at="2018-07-15T22:14:59Z" finished-at="2018-07-15T22:16:47Z">
     <groups>
     </groups>
-    <test name="Basic Tests" duration-ms="13" started-at="2018-06-09T20:28:35Z" finished-at="2018-06-09T20:28:35Z">
-    </test> <!-- Basic Tests -->
-    <test name="Practice Tests" duration-ms="27740" started-at="2018-06-09T20:28:35Z" finished-at="2018-06-09T20:29:02Z">
-      <class name="Project.PracticePageTest2">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.PracticePageTest2@34e9fd99]" name="openBrowser" is-config="true" duration-ms="11763" started-at="2018-06-09T14:28:35Z" finished-at="2018-06-09T14:28:46Z">
+    <test name="Default test" duration-ms="108355" started-at="2018-07-15T22:14:59Z" finished-at="2018-07-15T22:16:47Z">
+      <class name="Project.LoginPageTest">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="openBrowser" is-config="true" duration-ms="18668" started-at="2018-07-15T16:14:59Z" finished-at="2018-07-15T16:15:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="accessAllLinks()[pri:0, instance:Project.PracticePageTest2@34e9fd99]" name="accessAllLinks" duration-ms="15891" started-at="2018-06-09T14:28:46Z" finished-at="2018-06-09T14:29:02Z">
+        <test-method status="PASS" signature="ForgotPassword()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="ForgotPassword" duration-ms="4003" started-at="2018-07-15T16:15:18Z" finished-at="2018-07-15T16:15:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accessAllLinks -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.PracticePageTest2@34e9fd99]" name="closeBrowser" is-config="true" duration-ms="62" started-at="2018-06-09T14:29:02Z" finished-at="2018-06-09T14:29:02Z">
+        </test-method> <!-- ForgotPassword -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="closeBrowser" is-config="true" duration-ms="2363" started-at="2018-07-15T16:15:22Z" finished-at="2018-07-15T16:15:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Project.PracticePageTest2 -->
-    </test> <!-- Practice Tests -->
-    <test name="SignUp Tests" duration-ms="1" started-at="2018-06-09T20:29:02Z" finished-at="2018-06-09T20:29:02Z">
-    </test> <!-- SignUp Tests -->
-  </suite> <!-- QA Click Academy Suite -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="openBrowser" is-config="true" duration-ms="11334" started-at="2018-07-15T16:15:24Z" finished-at="2018-07-15T16:15:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="LoginButton()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="LoginButton" duration-ms="5558" started-at="2018-07-15T16:15:35Z" finished-at="2018-07-15T16:15:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginButton -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="closeBrowser" is-config="true" duration-ms="218" started-at="2018-07-15T16:15:41Z" finished-at="2018-07-15T16:15:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="openBrowser" is-config="true" duration-ms="11901" started-at="2018-07-15T16:15:41Z" finished-at="2018-07-15T16:15:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="LoginDetails(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.LoginPageTest@5158b42f]" name="LoginDetails" duration-ms="13695" started-at="2018-07-15T16:15:53Z" data-provider="LoginDetails" finished-at="2018-07-15T16:16:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pratyusha321@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Restricted User]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginDetails -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="closeBrowser" is-config="true" duration-ms="2340" started-at="2018-07-15T16:16:07Z" finished-at="2018-07-15T16:16:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="openBrowser" is-config="true" duration-ms="14770" started-at="2018-07-15T16:16:09Z" finished-at="2018-07-15T16:16:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="LoginDetails(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Project.LoginPageTest@5158b42f]" name="LoginDetails" duration-ms="3880" started-at="2018-07-15T16:16:24Z" data-provider="LoginDetails" finished-at="2018-07-15T16:16:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[batman@gotham.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UnRestricted User]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginDetails -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="closeBrowser" is-config="true" duration-ms="160" started-at="2018-07-15T16:16:28Z" finished-at="2018-07-15T16:16:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="openBrowser" is-config="true" duration-ms="14054" started-at="2018-07-15T16:16:28Z" finished-at="2018-07-15T16:16:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="SendInstructions()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="SendInstructions" duration-ms="3240" started-at="2018-07-15T16:16:42Z" finished-at="2018-07-15T16:16:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendInstructions -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Project.LoginPageTest@5158b42f]" name="closeBrowser" is-config="true" duration-ms="2117" started-at="2018-07-15T16:16:45Z" finished-at="2018-07-15T16:16:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Project.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

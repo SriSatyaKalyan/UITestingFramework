@@ -24,11 +24,13 @@ import resources.baseClass;
 
 public class SignUpPageTest extends baseClass{
 	
+	//Creating instances of PageObjects
 	public signuppageObjects signuppageobject = new signuppageObjects(driver);
 	
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 		
+	//Initializing the driver and navigating to the homepage
 	@BeforeMethod
 	public void openBrowser() throws IOException, InterruptedException {
 		driver = initializeDriver();
@@ -37,6 +39,7 @@ public class SignUpPageTest extends baseClass{
 		log.info("Navigated to SignUp Page");
 	}
 	
+	//Verifying the title text for the page
 	@Test
 	public void TitleTextValidation() {
 		log.info("SignUpPageTest.TitleTextValidation");
@@ -54,6 +57,7 @@ public class SignUpPageTest extends baseClass{
 		}
 	}
 	
+	//Test which takes in the various credentials from the DataProvider method and sends them as input to the sign-in section
 	@Test(dataProvider = "SignupDetails")
 	public void SignUpTest(String fullname, String emailaddress, boolean subscriptionCheckbox, String password, String confirmpassword, boolean termsofuseCheckbox, String credentialsinfo) {
 		log.info("SignUpPageTest.SignUpTest");
@@ -76,7 +80,7 @@ public class SignUpPageTest extends baseClass{
 
 		signuppageobject.signupButton().click();	
 		
-		System.out.println("ErrorExistence " + signuppageobject.ErrorMessage().size());
+		log.info("ErrorExistence " + signuppageobject.ErrorMessage().size());
 		if (((List<WebElement>) signuppageobject.ErrorMessage()).size() > 0) {
 			
 			System.out.println("EmailUseError " + signuppageobject.emailUseErrorMessage().size());
@@ -107,6 +111,8 @@ public class SignUpPageTest extends baseClass{
 			
 	}
 	
+	//Method which has the needed credentials for the test to run in every iteration
+	//This Data Provider method has different kinds of credentials testing the aspects of the signup & error process
 	@DataProvider
 	public Object[][] SignupDetails(){
 		Object data[][] = new Object[4][7];
@@ -158,6 +164,7 @@ public class SignUpPageTest extends baseClass{
 		return data;
 	}
 	
+	//Closing the driver
 	@AfterMethod
 	public void closeBrowser() {
 		driver.close();

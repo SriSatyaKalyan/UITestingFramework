@@ -31,6 +31,7 @@ public class HomePageTest extends baseClass{
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 		
+	//Initializing the driver and navigating to the homepage
 	@BeforeClass
 	public void openBrowser() throws IOException {
 		driver = initializeDriver();
@@ -39,29 +40,26 @@ public class HomePageTest extends baseClass{
 		log.info("Navigated to HomePage");
 	}
 	
+	//Checking the presence of popup and removing it from performing further tests
 	@Test
 	public void PopupPresence() {
 		log.info("HomePageTest.PopupPresence");
-//		homepageObjects homepageobjects = new homepageObjects(driver);
 		
 		//Code snippet to get the popup out of the page
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(homepageobjects.findPopup()));
-		//log.info("Popup visible");
 		wait.until(ExpectedConditions.elementToBeClickable(homepageobjects.findNoThanks()));
 		homepageobjects.getNoThanksbutton().click();
 		
 		log.info(driver.switchTo().alert().getText());
 	}
 	
+	//Validating the title of the page
 	@Test
 	public void TitleTextValidation() {	
 		log.info("HomePageTest.TitleTextValidation");
-//		homepageObjects objs = new homepageObjects(driver);
-				
 		String title_text = homepageobjects.getTitle().getText();
 		String expected = "FEATURED COURSES";
-//		log.info(title_text);
 		
 		if(title_text.contains(expected)) {
 			log.info("Successfully validated Text Message on Home Page");
@@ -72,14 +70,15 @@ public class HomePageTest extends baseClass{
 		}
 	}
 	
+	//Validating the presence of the navigation bar in the page
 	@Test
 	public void NavigationBarPresence() {
 		log.info("HomePageTest.NavigationBarPresence");
-//		homepageObjects objs = new homepageObjects(driver);
 		Assert.assertTrue(homepageobjects.getNavigationBar().isDisplayed());
 		log.info("Validated presence of Navigation Bar");
 	}
 	
+	//Closing the driver
 	@AfterClass
 	public void closeBrowser() {
 		driver.close();

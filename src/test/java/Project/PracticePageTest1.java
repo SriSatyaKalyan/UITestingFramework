@@ -30,11 +30,13 @@ import resources.baseClass;
 
 public class PracticePageTest1 extends baseClass{
 	
+	//Creating instances of PageObjects
 	public practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
 	
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 	
+	//Initializing the driver and navigating to the practicepage
 	@BeforeMethod
 	public void openBrowser() throws IOException, InterruptedException {
 		driver = initializeDriver();
@@ -43,32 +45,25 @@ public class PracticePageTest1 extends baseClass{
 		log.info("Navigated to Practice Page");
 	}
 	
-    
+    //Validating the title text 
 	@Test
 	public void TitleTextValidation() {
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
 		log.info("PracticePageTest.TitleTextValidation");
 		
-		String title_text = practicepageobjects.getTitle().getText();
-		String expected = "Practice Page";
-		//System.out.println(title_text);
-		
-		if(title_text.contains(expected)) {
+		if(practicepageobjects.getTitle().getText().contains("Practice Page")) {
 			log.info("Successfully validated Text Message on Practice Page");
-			Assert.assertTrue(title_text.contains(expected));
+			Assert.assertTrue(practicepageobjects.getTitle().getText().contains("Practice Page"));
 		}else {
 			log.error("Error in validating Text Message on Practice Page");
 			Assert.assertFalse(true);
 		}
 	}
 	
-	//RadioButtons
+	//Validating the title on the RadioButtons section
 	@Test
 	public void RadioButtonTitle() {
 		log.info("PracticePageTest.RadioButtonExample");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
-		
-		//System.out.println(objs.getRadioButtonTitle().getText());
+
 		if (practicepageobjects.getRadioButtonTitle().getText().contains("Radio Button")) {
 			Assert.assertTrue(true);
 		}else {
@@ -80,7 +75,6 @@ public class PracticePageTest1 extends baseClass{
 	@Test
 	public void RadioButtons() throws IOException {
 		log.info("PracticePageTest.RadioButtons");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
 
 		int radiobuttonnumber = Integer.parseInt(prop.getProperty("radiobutton"));
 		
@@ -105,13 +99,11 @@ public class PracticePageTest1 extends baseClass{
 		log.info("Check the 'Radiobuttons.png' file in 'TestFailureScreenshots' folder situated in the basepath");
 	}
 	
-	//Suggestion Class
+	//Validating the title text for Suggestion Class section
 	@Test
 	public void SuggestionClassTitle() {
 		log.info("PracticePageTest.SuggestionClassTitle");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
-		
-		//System.out.println(objs.getSuggestionClass().getText());
+
 		if (practicepageobjects.getSuggestionClass().getText().contains("Suggession Class")) {
 			Assert.assertTrue(true);
 		}else {
@@ -119,11 +111,10 @@ public class PracticePageTest1 extends baseClass{
 		}
 	} 
 	
-
+	//Test performed to get the suggested country. Check the test carefully for better understanding
 	@Test
 	public void getSuggestedCountry() {
 		log.info("PracticePageTest.getSuggestedCountry");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
 		log.info("Change the 'countrykeyword' and 'country' property values in the properties file accordingly");
 		practicepageobjects.getSuggestionBox().sendKeys(prop.getProperty("countrykeyword"));
 		
@@ -144,12 +135,11 @@ public class PracticePageTest1 extends baseClass{
 		}
 	}
 		
-	//DropDown Example Title
+	//Verifying the title text for the DropDown Example section
 	@Test
 	public void DropDownExampleTitle() {
 		log.info("PracticePageTest.DropDownExampleTitle");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
-		
+
 		if (practicepageobjects.getDropDownTitle().getText().contains("Dropdown Example")) {
 			Assert.assertTrue(true);
 		}else {
@@ -157,12 +147,11 @@ public class PracticePageTest1 extends baseClass{
 		}
 	}
 	
-	
+	//Test performing the selection of DropDown options and selecting one of them
 	@Test
 	public void selectDropDownOptions() {
 		log.info("PracticePageTest.selectDropDownOptions");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
-		
+
 		practicepageobjects.hitDropdownmenu().click();
 		
 		for (int i=1;i<=3; i++) {
@@ -174,11 +163,11 @@ public class PracticePageTest1 extends baseClass{
 		}
 	}
 	
+	//Verifying the title text for the Checkbox Example section
 	@Test
 	public void CheckboxExampleTitle() {
 		log.info("PracticePageTest.CheckboxExampleTitle");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
-//		System.out.println(objs.getCheckboxTitle().getText());
+
 		if (practicepageobjects.getCheckboxTitle().getText().contains("Checkbox")) {
 			Assert.assertTrue(true);
 		}else {
@@ -186,11 +175,11 @@ public class PracticePageTest1 extends baseClass{
 		}
 	}
 	
+	//Selecting a particular checkbox which is random number between 1,2 and 3
 	@Test
 	public void selectCheckbox() {
 		log.info("PracticePageTest.selectCheckbox");
-//		practicepageObjects1 practicepageobjects = new practicepageObjects1(driver);
-		
+
 		if(prop.getProperty("checkboxnumber").equals("1")) {
 			practicepageobjects.getCheckbox1().click();
 		}else if(prop.getProperty("checkboxnumber").equals("2")) {
@@ -200,6 +189,7 @@ public class PracticePageTest1 extends baseClass{
 		}
 	}
 	
+	//Closing the driver
 	@AfterMethod
 	public void closeBrowser() {
 		log.info("Closing the driver");

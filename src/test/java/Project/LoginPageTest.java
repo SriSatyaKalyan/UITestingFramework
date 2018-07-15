@@ -29,12 +29,14 @@ import resources.baseClass;
 
 public class LoginPageTest extends baseClass {
 	
+	//Creating instances of PageObjects
 	public loginpageObjects loginpageobjects = new loginpageObjects(driver);
 	public homepageObjects homepageobjects = new homepageObjects(driver);
 	
 	//Mandatory Step needed to make sure that the logs are shown
 	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 	
+	//Initializing the driver and navigating to the loginpage
 	@BeforeMethod
 	public void openBrowser() throws IOException {
 		driver = initializeDriver();
@@ -42,12 +44,11 @@ public class LoginPageTest extends baseClass {
 		driver.get(prop.getProperty("homepage"));
 		log.info("Navigated to Home Page");
 	}
-		
+	
+	//Verifying the presence of LoginButton
 	@Test
 	public void LoginButton() {	
 		log.info("LoginPageTest.LoginButton");
-//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
-//		homepageObjects homepageobjects = new homepageObjects(driver);
 		
 		//Code snippet to get the popup out of the page
 		WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -67,11 +68,11 @@ public class LoginPageTest extends baseClass {
 			Assert.assertFalse(true);
 		}
 	}
-
+	
+	
 	@Test(dataProvider = "LoginDetails")
 	public void LoginDetails(String username, String password, String text) throws IOException {
 		log.info("LoginPageTest.LoginDetails");
-//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
 		driver.navigate().to(prop.getProperty("loginpage"));
 		
 		log.info("LoginPageTest.LoginDetails");
@@ -87,6 +88,7 @@ public class LoginPageTest extends baseClass {
 		}
 	}
 	
+	//Creating a DataProvider class which provides different parameters to the tests
 	@DataProvider
 	public Object[][] LoginDetails() {
 		Object data[][] = new Object[2][3];
@@ -104,10 +106,10 @@ public class LoginPageTest extends baseClass {
 		return data;
 	}
 	
+	//Verifying the presence of "Reset Password" button after clicking on ForgotPassword icon
 	@Test
 	public void ForgotPassword() {
 		log.info("LoginPageTest.ForgotPassword");
-//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
 		driver.navigate().to(prop.getProperty("loginpage"));
 		
 		loginpageobjects.getForgotPassword().click();
@@ -121,14 +123,13 @@ public class LoginPageTest extends baseClass {
 		}
 	}
 	
+	//Clicking on the ForgotPassword button and checking if the error message is being produced
 	@Test
 	public void SendInstructions() {
 		log.info("LoginPageTest.SendInstructions");
-//		loginpageObjects loginpageobjects = new loginpageObjects(driver);
 		driver.navigate().to(prop.getProperty("loginpage"));
 		
 		loginpageobjects.getForgotPassword().click();
-		//System.out.println("Clicked Forgot Password button");
 		
 		Actions action = new Actions(driver);
 		//If there is any error, it would be in prop.getProperty function
@@ -144,6 +145,7 @@ public class LoginPageTest extends baseClass {
 		}
 	}
 	
+	//Closing the driver
 	@AfterMethod
 	public void closeBrowser() {
 		driver.close();
