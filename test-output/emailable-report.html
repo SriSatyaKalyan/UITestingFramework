@@ -31,26 +31,60 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">108.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Basic Tests</td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">144.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Practice Tests</td><td class="numi">25</td><td class="numi">25</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">335.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">SignUp Tests</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">186.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">37</td><td class="numi">37</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">666.1 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="5">Project.LoginPageTest</td><td><a href="#m1"><b>ForgotPassword</b>  </a></td><td class="numi">1</td><td>1531692918214</td><td class="numi">4003</td></tr><tr class="passedodd"><td><a href="#m2"><b>LoginButton</b>  </a></td><td class="numi">1</td><td>1531692935917</td><td class="numi">5558</td></tr><tr class="passedodd"><td><a href="#m3"><b>LoginDetails</b>  </a></td><td class="numi">2</td><td>1531692953610</td><td class="numi">34687</td></tr><tr class="passedodd"><td><a href="#m4"><b>LoginDetails</b>  </a></td><td class="numi">2</td><td>1531692953610</td><td class="numi">34687</td></tr><tr class="passedodd"><td><a href="#m5"><b>SendInstructions</b>  </a></td><td class="numi">1</td><td>1531693002512</td><td class="numi">3240</td></tr>
+<tr><th colspan="4">Basic Tests &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">Project.HomePageTest</td><td><a href="#m1"><b>PopupPresence</b>  </a></td><td class="numi">1</td><td>1533514473938</td><td class="numi">5355</td></tr>
+<tr><th colspan="4">Basic Tests &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">Project.HomePageTest</td><td><a href="#m2"><b>NavigationBarPresence</b>  </a></td><td class="numi">1</td><td>1533514473794</td><td class="numi">144</td></tr><tr class="passedodd"><td><a href="#m3"><b>TitleTextValidation</b>  </a></td><td class="numi">1</td><td>1533514479721</td><td class="numi">49</td></tr>
+<tr class="passedeven"><td rowspan="5">Project.LoginPageTest</td><td><a href="#m4"><b>ForgotPassword</b>  </a></td><td class="numi">1</td><td>1533514500931</td><td class="numi">2939</td></tr><tr class="passedeven"><td><a href="#m5"><b>LoginButton</b>  </a></td><td class="numi">1</td><td>1533514515254</td><td class="numi">7840</td></tr><tr class="passedeven"><td><a href="#m6"><b>LoginDetails</b>  </a></td><td class="numi">2</td><td>1533514536817</td><td class="numi">46688</td></tr><tr class="passedeven"><td><a href="#m7"><b>LoginDetails</b>  </a></td><td class="numi">2</td><td>1533514536817</td><td class="numi">46688</td></tr><tr class="passedeven"><td><a href="#m8"><b>SendInstructions</b>  </a></td><td class="numi">1</td><td>1533514592570</td><td class="numi">3400</td></tr>
+<tr><th colspan="4">Practice Tests &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">Project.PracticePageTest1</td><td><a href="#m9"><b>getSuggestedCountry</b>  </a></td><td class="numi">1</td><td>1533514691819</td><td class="numi">755</td></tr><tr class="failedodd"><td><a href="#m10"><b>selectDropDownOptions</b>  </a></td><td class="numi">1</td><td>1533514711748</td><td class="numi">380</td></tr>
+<tr><th colspan="4">Practice Tests &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="7">Project.PracticePageTest1</td><td><a href="#m11"><b>CheckboxExampleTitle</b>  </a></td><td class="numi">1</td><td>1533514633703</td><td class="numi">79</td></tr><tr class="passedodd"><td><a href="#m12"><b>DropDownExampleTitle</b>  </a></td><td class="numi">1</td><td>1533514643218</td><td class="numi">108</td></tr><tr class="passedodd"><td><a href="#m13"><b>RadioButtonTitle</b>  </a></td><td class="numi">1</td><td>1533514654204</td><td class="numi">93</td></tr><tr class="passedodd"><td><a href="#m14"><b>RadioButtons</b>  </a></td><td class="numi">1</td><td>1533514663658</td><td class="numi">696</td></tr><tr class="passedodd"><td><a href="#m15"><b>SuggestionClassTitle</b>  </a></td><td class="numi">1</td><td>1533514673235</td><td class="numi">103</td></tr><tr class="passedodd"><td><a href="#m16"><b>TitleTextValidation</b>  </a></td><td class="numi">1</td><td>1533514682247</td><td class="numi">80</td></tr><tr class="passedodd"><td><a href="#m17"><b>selectCheckbox</b>  </a></td><td class="numi">1</td><td>1533514701911</td><td class="numi">180</td></tr>
+<tr class="passedeven"><td rowspan="18">Project.PracticePageTest2</td><td><a href="#m18"><b>OpenNewTab</b>  </a></td><td class="numi">1</td><td>1533514721996</td><td class="numi">1646</td></tr><tr class="passedeven"><td><a href="#m19"><b>OpenNewWindow</b>  </a></td><td class="numi">1</td><td>1533514733271</td><td class="numi">1522</td></tr><tr class="passedeven"><td><a href="#m20"><b>accessAllLinks</b>  </a></td><td class="numi">1</td><td>1533514746035</td><td class="numi">16948</td></tr><tr class="passedeven"><td><a href="#m21"><b>elementHide</b>  </a></td><td class="numi">1</td><td>1533514772697</td><td class="numi">220</td></tr><tr class="passedeven"><td><a href="#m22"><b>elementShow</b>  </a></td><td class="numi">1</td><td>1533514785091</td><td class="numi">304</td></tr><tr class="passedeven"><td><a href="#m23"><b>getAlert</b>  </a></td><td class="numi">1</td><td>1533514794703</td><td class="numi">349</td></tr><tr class="passedeven"><td><a href="#m24"><b>getConfirm</b>  </a></td><td class="numi">1</td><td>1533514806107</td><td class="numi">263</td></tr><tr class="passedeven"><td><a href="#m25"><b>getElementDisplayedTitle</b>  </a></td><td class="numi">1</td><td>1533514817258</td><td class="numi">105</td></tr><tr class="passedeven"><td><a href="#m26"><b>getSwitchAlertTitle</b>  </a></td><td class="numi">1</td><td>1533514826163</td><td class="numi">108</td></tr><tr class="passedeven"><td><a href="#m27"><b>getSwitchTabTitle</b>  </a></td><td class="numi">1</td><td>1533514837735</td><td class="numi">63</td></tr><tr class="passedeven"><td><a href="#m28"><b>getSwitchWindowTitle</b>  </a></td><td class="numi">1</td><td>1533514850291</td><td class="numi">81</td></tr><tr class="passedeven"><td><a href="#m29"><b>getTable</b>  </a></td><td class="numi">1</td><td>1533514859157</td><td class="numi">697</td></tr><tr class="passedeven"><td><a href="#m30"><b>getTableTitle</b>  </a></td><td class="numi">1</td><td>1533514869289</td><td class="numi">59</td></tr><tr class="passedeven"><td><a href="#m31"><b>iFrameOperation</b>  </a></td><td class="numi">1</td><td>1533514883427</td><td class="numi">216</td></tr><tr class="passedeven"><td><a href="#m32"><b>iFrameTitle</b>  </a></td><td class="numi">1</td><td>1533514892889</td><td class="numi">139</td></tr><tr class="passedeven"><td><a href="#m33"><b>mouseHoverTitle</b>  </a></td><td class="numi">1</td><td>1533514903958</td><td class="numi">218</td></tr><tr class="passedeven"><td><a href="#m34"><b>mouseHoverselectReload</b>  </a></td><td class="numi">1</td><td>1533514914532</td><td class="numi">2027</td></tr><tr class="passedeven"><td><a href="#m35"><b>mouseHoverselectTop</b>  </a></td><td class="numi">1</td><td>1533514929100</td><td class="numi">360</td></tr>
+<tr><th colspan="4">SignUp Tests &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="5">Project.SignUpPageTest</td><td><a href="#m36"><b>SignUpTest</b>  </a></td><td class="numi">4</td><td>1533514938585</td><td class="numi">171561</td></tr><tr class="passedodd"><td><a href="#m37"><b>SignUpTest</b>  </a></td><td class="numi">4</td><td>1533514938585</td><td class="numi">171561</td></tr><tr class="passedodd"><td><a href="#m38"><b>SignUpTest</b>  </a></td><td class="numi">4</td><td>1533514938585</td><td class="numi">171561</td></tr><tr class="passedodd"><td><a href="#m39"><b>SignUpTest</b>  </a></td><td class="numi">4</td><td>1533514938585</td><td class="numi">171561</td></tr><tr class="passedodd"><td><a href="#m40"><b>TitleTextValidation</b>  </a></td><td class="numi">1</td><td>1533515117347</td><td class="numi">189</td></tr>
 </table>
-<h1>Default test</h1>
-<h2 id="m1">Project.LoginPageTest:LoginDetails</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
-<tr class="param stripe"><td>batman@gotham.com</td>
-<td>123456</td>
-<td>UnRestricted User</td>
-</tr>
-</table>
+<h1>Basic Tests</h1>
+<h2 id="m1">Project.HomePageTest:PopupPresence</h2>
+<div style="padding-left:3em">
+<p>no alert open
+  (Session info: chrome=68.0.3440.84)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-K6D606K&apos;, ip: &apos;10.0.0.59&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_172&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\satya\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.84, webStorageEnabled: true}
+Session ID: 1980b3c04d49c35f2d326477688fc77e</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:923)
+<br/>at Project.HomePageTest.PopupPresence(HomePageTest.java:50)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">Project.LoginPageTest:SendInstructions</h2>
+<h2 id="m2">Project.LoginPageTest:ForgotPassword</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">Project.LoginPageTest:LoginButton</h2>
+<h2 id="m3">Project.LoginPageTest:SendInstructions</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m4">Project.LoginPageTest:LoginDetails</h2>
 <table cellspacing="0" cellpadding="0" class="result">
@@ -61,6 +95,143 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">Project.LoginPageTest:ForgotPassword</h2>
+<h2 id="m5">Project.LoginPageTest:LoginButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">Project.LoginPageTest:LoginDetails</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
+<tr class="param stripe"><td>batman@gotham.com</td>
+<td>123456</td>
+<td>UnRestricted User</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">Project.HomePageTest:TitleTextValidation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">Project.HomePageTest:NavigationBarPresence</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Practice Tests</h1>
+<h2 id="m9">Project.PracticePageTest1:selectDropDownOptions</h2>
+<div style="padding-left:3em">
+<p>Index: 3, Size: 3</p>
+java.util.ArrayList.rangeCheck(Unknown Source)
+<br/>at java.util.ArrayList.get(Unknown Source)
+<br/>at Project.PracticePageTest1.selectDropDownOptions(PracticePageTest1.java:164)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">Project.PracticePageTest1:getSuggestedCountry</h2>
+<div style="padding-left:3em">
+<p>Index: 3, Size: 3</p>
+java.util.ArrayList.rangeCheck(Unknown Source)
+<br/>at java.util.ArrayList.get(Unknown Source)
+<br/>at Project.PracticePageTest1.getSuggestedCountry(PracticePageTest1.java:133)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">Project.PracticePageTest1:TitleTextValidation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">Project.PracticePageTest2:iFrameOperation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">Project.PracticePageTest2:elementHide</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">Project.PracticePageTest2:OpenNewWindow</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">Project.PracticePageTest2:getConfirm</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">Project.PracticePageTest2:getSwitchAlertTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">Project.PracticePageTest2:getSwitchTabTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">Project.PracticePageTest2:mouseHoverTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">Project.PracticePageTest1:RadioButtons</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">Project.PracticePageTest2:getSwitchWindowTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">Project.PracticePageTest2:mouseHoverselectReload</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">Project.PracticePageTest2:mouseHoverselectTop</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">Project.PracticePageTest1:SuggestionClassTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">Project.PracticePageTest2:getAlert</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">Project.PracticePageTest2:iFrameTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">Project.PracticePageTest1:CheckboxExampleTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">Project.PracticePageTest1:selectCheckbox</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">Project.PracticePageTest1:DropDownExampleTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">Project.PracticePageTest2:elementShow</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">Project.PracticePageTest2:getElementDisplayedTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">Project.PracticePageTest2:OpenNewTab</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">Project.PracticePageTest2:getTable</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">Project.PracticePageTest2:getTableTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">Project.PracticePageTest1:RadioButtonTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">Project.PracticePageTest2:accessAllLinks</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>SignUp Tests</h1>
+<h2 id="m36">Project.SignUpPageTest:SignUpTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr>
+<tr class="param stripe"><td>Dick Gray</td>
+<td>nightwing231@tokomo.com</td>
+<td>true</td>
+<td>b@tm@nknows</td>
+<td>b@tm@nknows</td>
+<td>true</td>
+<td>Used Login Details</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">Project.SignUpPageTest:TitleTextValidation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">Project.SignUpPageTest:SignUpTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr>
+<tr class="param stripe"><td>Bat Woman</td>
+<td>iax@valhalla.com</td>
+<td>false</td>
+<td>deadpool</td>
+<td>deadpool</td>
+<td>true</td>
+<td>New Login Details</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">Project.SignUpPageTest:SignUpTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr>
+<tr class="param stripe"><td>Cat Woman</td>
+<td>norulesforcat@valhalla.com</td>
+<td>false</td>
+<td>b@tm@nknows</td>
+<td>b@tm@nknows</td>
+<td>false</td>
+<td>Non-Agreement to the Terms of Use and Privacy Policy</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">Project.SignUpPageTest:SignUpTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th></tr>
+<tr class="param stripe"><td>Robin Hood</td>
+<td>robingood@valhalla.com</td>
+<td>false</td>
+<td>b@tm@nknows</td>
+<td>b@tm@5knows</td>
+<td>true</td>
+<td>Passwords won&apos;t match</td>
+</tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

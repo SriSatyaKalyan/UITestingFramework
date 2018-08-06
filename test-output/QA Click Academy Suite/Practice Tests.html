@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Practice Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>25/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 09 14:28:35 MDT 2018</td>
+<td>Started on:</td><td>Sun Aug 05 20:16:36 EDT 2018</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27740 ms)</td>
+<tr><td>Total time:</td><td>335 seconds (335607 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,90 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Project.PracticePageTest1.getSuggestedCountry()'><b>getSuggestedCountry</b><br>Test class: Project.PracticePageTest1</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 3, Size: 3
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at Project.PracticePageTest1.getSuggestedCountry(PracticePageTest1.java:133)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace715504968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace715504968'><pre>java.lang.IndexOutOfBoundsException: Index: 3, Size: 3
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at Project.PracticePageTest1.getSuggestedCountry(PracticePageTest1.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.selectDropDownOptions()'><b>selectDropDownOptions</b><br>Test class: Project.PracticePageTest1</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 3, Size: 3
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at Project.PracticePageTest1.selectDropDownOptions(PracticePageTest1.java:164)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace745089008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace745089008'><pre>java.lang.IndexOutOfBoundsException: Index: 3, Size: 3
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at Project.PracticePageTest1.selectDropDownOptions(PracticePageTest1.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +159,130 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Project.PracticePageTest1.CheckboxExampleTitle()'><b>CheckboxExampleTitle</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.DropDownExampleTitle()'><b>DropDownExampleTitle</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.OpenNewTab()'><b>OpenNewTab</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>1</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.OpenNewWindow()'><b>OpenNewWindow</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>1</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.RadioButtonTitle()'><b>RadioButtonTitle</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.RadioButtons()'><b>RadioButtons</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.SuggestionClassTitle()'><b>SuggestionClassTitle</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.TitleTextValidation()'><b>TitleTextValidation</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
+<tr>
 <td title='Project.PracticePageTest2.accessAllLinks()'><b>accessAllLinks</b><br>Test class: Project.PracticePageTest2</td>
 <td></td>
-<td>15</td>
-<td>Project.PracticePageTest2@34e9fd99</td></tr>
+<td>16</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.elementHide()'><b>elementHide</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.elementShow()'><b>elementShow</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getAlert()'><b>getAlert</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getConfirm()'><b>getConfirm</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getElementDisplayedTitle()'><b>getElementDisplayedTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getSwitchAlertTitle()'><b>getSwitchAlertTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getSwitchTabTitle()'><b>getSwitchTabTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getSwitchWindowTitle()'><b>getSwitchWindowTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getTable()'><b>getTable</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.getTableTitle()'><b>getTableTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.iFrameOperation()'><b>iFrameOperation</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.iFrameTitle()'><b>iFrameTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.mouseHoverTitle()'><b>mouseHoverTitle</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.mouseHoverselectReload()'><b>mouseHoverselectReload</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>2</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest2.mouseHoverselectTop()'><b>mouseHoverselectTop</b><br>Test class: Project.PracticePageTest2</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest2@130d63be</td></tr>
+<tr>
+<td title='Project.PracticePageTest1.selectCheckbox()'><b>selectCheckbox</b><br>Test class: Project.PracticePageTest1</td>
+<td></td>
+<td>0</td>
+<td>Project.PracticePageTest1@7d8995e</td></tr>
 </table><p>
 </body>
 </html>

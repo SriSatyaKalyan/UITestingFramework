@@ -5,15 +5,75 @@
     <listener class-name="Project.listeners"/>
     <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
-  <test name="Practice Tests(failed)">
+  <test name="Basic Tests(failed)">
     <classes>
+      <class name="Project.HomePageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+          <include name="PopupPresence"/>
+        </methods>
+      </class> <!-- Project.HomePageTest -->
+      <class name="Project.PracticePageTest1">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- Project.PracticePageTest1 -->
       <class name="Project.PracticePageTest2">
         <methods>
           <include name="closeBrowser"/>
-          <include name="iFrameOperation"/>
           <include name="openBrowser"/>
         </methods>
       </class> <!-- Project.PracticePageTest2 -->
+      <class name="Project.SignUpPageTest">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- Project.SignUpPageTest -->
+      <class name="Project.LoginPageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Project.LoginPageTest -->
+    </classes>
+  </test> <!-- Basic Tests(failed) -->
+  <test name="Practice Tests(failed)">
+    <classes>
+      <class name="Project.HomePageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Project.HomePageTest -->
+      <class name="Project.PracticePageTest1">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="selectDropDownOptions"/>
+          <include name="getSuggestedCountry"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- Project.PracticePageTest1 -->
+      <class name="Project.PracticePageTest2">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Project.PracticePageTest2 -->
+      <class name="Project.SignUpPageTest">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- Project.SignUpPageTest -->
+      <class name="Project.LoginPageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Project.LoginPageTest -->
     </classes>
   </test> <!-- Practice Tests(failed) -->
 </suite> <!-- Failed suite [QA Click Academy Suite] -->
